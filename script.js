@@ -10,14 +10,13 @@ const accounts = [
 ]
   
 function login() {
-    let username = document.querySelector(".login input[type='text  ']").value;
+    let username = document.querySelector(".login input[type='text']").value;
     let password = document.querySelector(".login input[type='password']").value;
     
     if (username === "" || password === "") {
       alert("Bạn chưa điền thông tin!");
       return;
     }
-    
     for (let account of accounts) {
       if (username === account.username && password === account.password) {
         window.location = "home.html";
@@ -28,6 +27,9 @@ function login() {
   }
   
   document.querySelector(".login button").addEventListener("click", login);
+  
+
+  // Sign-in
   function sign(){
     let username = document.querySelector(".login input[type='email']").value;
     let password = document.querySelector(".login input[type='password']").value;
