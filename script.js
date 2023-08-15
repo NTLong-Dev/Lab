@@ -1,8 +1,12 @@
 const accounts = [
-  {username: "admin",  
+  {username: "Admin",  
     password: "admin"},
     {username: "Long",
-    password: "Long"}
+    password: "long"},
+    {
+      username: "Hoang",
+      password:"hoang"
+    }
 ]
   
 function login() {
@@ -24,3 +28,15 @@ function login() {
   }
   
   document.querySelector(".login button").addEventListener("click", login);
+  function sign(){
+    let username = document.querySelector(".login input[type='text']").value;
+    let password = document.querySelector(".login input[type='password']").value;
+    let user = document.querySelector(".login input[type='text']").value;
+    if (username === "" || password === ""|| user === "") {
+      alert("Bạn chưa điền thông tin!");
+    }else{
+    alert("Đăng Nhập Thành Công");
+    window.location = "index.html";
+    return; 
+  }
+  }

@@ -1,6 +1,8 @@
 body{
     background-image: linear-gradient(to right, #ff0000, #fff);
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 .login{
     width: 300px;
@@ -26,24 +28,25 @@ input{
     border-radius: 10px;
     border: 1px solid transparent;
     padding-left: 10px;
-    margin-left: -130px;
+    margin-left: -140px;
     font-family: 'Times New Roman', Times, serif;
     padding: 0 35px;
 }
 .icon1{
     position: absolute;
-    transform: translate(-420%, 70%);
+    transform: translate(-450%, 70%);
     font-size: 30px;
 }
 .icon2{
     position: absolute;
-    transform: translate(-420%, 70%);
+    transform: translate(-450%, 70%);
     font-size: 30px;
 }
 input:focus {
     outline:none
   }
 button{
+    margin-left: -5%;
     height: 70px;
     width: 324px;
     margin-top: 15px;
@@ -65,4 +68,10 @@ button:hover{
 }
 p{
     font-family: 'Times New Roman', Times, serif;
+}
+.back{
+        margin-left: -60%;
+        margin-right: 100%;
+        color: #ffff;
+
 }
