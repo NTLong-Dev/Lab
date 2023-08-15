@@ -10,7 +10,7 @@ const accounts = [
 ]
   
 function login() {
-    let username = document.querySelector(".login input[type='text']").value;
+    let username = document.querySelector(".login input[type='text  ']").value;
     let password = document.querySelector(".login input[type='password']").value;
     
     if (username === "" || password === "") {
