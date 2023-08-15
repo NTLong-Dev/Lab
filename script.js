@@ -29,10 +29,10 @@ function login() {
   
   document.querySelector(".login button").addEventListener("click", login);
   function sign(){
-    let username = document.querySelector(".login input[type='text']").value;
+    let username = document.querySelector(".login input[type='email']").value;
     let password = document.querySelector(".login input[type='password']").value;
     let user = document.querySelector(".login input[type='text']").value;
-    if (username === "" || password === ""|| user === "") {
+    if (username === "" || user === "" || password === "" ) {
       alert("Bạn chưa điền thông tin!");
     }else{
     alert("Đăng Nhập Thành Công");
