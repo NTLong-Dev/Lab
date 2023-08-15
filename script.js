@@ -1,15 +1,24 @@
-const accounts = [
-  {username: "Admin",  
-    password: "admin"},
-    {username: "Long",
-    password: "long"},
-    {
-      username: "Hoang",
-      password:"hoang"
-    }
-]
+function sign(){
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var email = document.getElementById("email").value
+
+  if (username === "" || password === "" || email ==="") {
+      alert("Vui lòng điền đầy đủ thông tin!");
+      return;
+  }
+
+  localStorage.setItem("username", username);
+  localStorage.setItem("password", password);
+  localStorage.setItem("email", email)
+
+  alert("Đăng ký thành công!");
+
+  window.location = "index.html";
+}
   
 function login() {
+
     let username = document.querySelector(".login input[type='text']").value;
     let password = document.querySelector(".login input[type='password']").value;
     
@@ -17,28 +26,17 @@ function login() {
       alert("Bạn chưa điền thông tin!");
       return;
     }
-    for (let account of accounts) {
-      if (username === account.username && password === account.password) {
+    let storedUsername = localStorage.getItem("username");
+    let storedPassword = localStorage.getItem("password");
+      if (username === storedUsername && password === storedPassword) {
         window.location = "home.html";
         return; 
+      }else{
+      alert("Sai tài khoản hoặc mật khẩu!");
       }
     }
-      alert("Sai tài khoản hoặc mật khẩu!");
-  }
-  
   document.querySelector(".login button").addEventListener("click", login);
   
 
   // Sign-in
-  function sign(){
-    let username = document.querySelector(".login input[type='email']").value;
-    let password = document.querySelector(".login input[type='password']").value;
-    let user = document.querySelector(".login input[type='text']").value;
-    if (username === "" || user === "" || password === "" ) {
-      alert("Bạn chưa điền thông tin!");
-    }else{
-    alert("Đăng Nhập Thành Công");
-    window.location = "index.html";
-    return; 
-  }
-  }
+
