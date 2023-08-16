@@ -19,7 +19,6 @@ body{
 h1{
     color: #fff;
     font-size: 50px;
-    margin-top: -100px;
     font-family: 'Times New Roman', Times, serif;
 }
 input{
@@ -76,7 +75,3 @@ p{
         color: #ffff;
 
 }   
-img{
-    width: 50%;
-    margin-right: -774px;
-}

@@ -4,7 +4,7 @@ function sign(){
   var email = document.getElementById("email").value
 
   if (username === "" || password === "" || email ==="") {
-      alert("Vui lòng điền đầy đủ thông tin!");
+      alert("Vui lòng điền đầy đủ thông tin!"); 
       return;
   }
 
@@ -16,7 +16,7 @@ function sign(){
 
   window.location = "index.html";
 }
-  
+    
 function login() {
 
     let username = document.querySelector(".login input[type='text']").value;
@@ -30,13 +30,8 @@ function login() {
     let storedPassword = localStorage.getItem("password");
       if (username === storedUsername && password === storedPassword) {
         window.location = "home.html";
-        return; 
       }else{
       alert("Sai tài khoản hoặc mật khẩu!");
       }
     }
   document.querySelector(".login button").addEventListener("click", login);
-  
-
-  // Sign-in
-
